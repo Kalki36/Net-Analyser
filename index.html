@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NETANALYZR - Network Packet Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>NET-ANALYZR - Real-Time Network Packet Analyzer</header>
+
+  <div class="controls">
+    <button onclick="startSniff()">Start Capture</button>
+    <button onclick="stopSniff()">Stop Capture</button>
+    <button onclick="exportCSV()">Export CSV</button>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <!-- Chart Sections -->
+  <section class="chart-section">
+    <h2> Protocol Distribution</h2>
+    <canvas id="protocolChart"></canvas>
+  </section>
+
+  <section class="chart-section">
+    <h2> Packet Rate Over Time</h2>
+    <canvas id="rateChart"></canvas>
+  </section>
+
+  <section class="chart-section">
+    <h2> Top Source IPs</h2>
+    <canvas id="topSrcChart"></canvas>
+  </section>
+
+  <!-- Packet Table -->
+  <section class="table-section">
+    <h2>📡 Live Packet Capture</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Protocol</th>
+          <th>Src Port</th>
+          <th>Dst Port</th>
+        </tr>
+      </thead>
+      <tbody id="packetTable"></tbody>
+    </table>
+  </section>
+
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
