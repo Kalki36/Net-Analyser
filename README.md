@@ -1,4 +1,4 @@
-#NETANALYZR Pro
+# NETANALYZR Pro
 
 Advanced Network Packet Analyzer and Visualization Dashboard
 
@@ -55,11 +55,7 @@ Compatible with Linux and macOS with minor interface changes
 Browser-based interface (no client installation required)
 
 Technology Stack
-Layer	Technology
-Backend	Python, Flask
-Packet Capture	Scapy
-Frontend	HTML, CSS, JavaScript
-Visualization	Chart.js
-GeoIP	MaxMind GeoLite2
-Export	CSV, PCAP
-OS Support	Windows (Npcap), Linux
+Layer	Technology: Backend	Python, Flask
+Packet Capture	Scapy: Frontend	HTML, CSS, JavaScript
+Visualization	Chart.js: GeoIP	MaxMind GeoLite2
+Export	CSV, PCAP: OS Support	Windows (Npcap), Linux
